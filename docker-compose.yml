@@ -17,7 +17,7 @@ services:
         depends_on:
             - mysql
         ports:
-            - ${a:-80}:80
+            - ${WEB_PORT:-80}:80
         volumes:
             - ./public:/var/www/html
         restart: always
