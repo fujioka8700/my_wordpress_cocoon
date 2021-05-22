@@ -31,7 +31,6 @@ services:
         depends_on:
             - mysql
         environment:
-            - PMA_ARBITRARY=1
             - PMA_HOST=mysql
             - PMA_USER=${DB_USER:-phper}
             - PMA_PASSWORD=${DB_PASS:-secret}
