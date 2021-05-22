@@ -13,9 +13,9 @@ services:
             MYSQL_PASSWORD: wordpress
 
     wordpress:
+        image: wordpress:php7.4-apache
         depends_on:
             - mysql
-        image: wordpress:php7.4-apache
         ports:
             - "80:80"
         volumes:
@@ -28,6 +28,8 @@ services:
 
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
+        depends_on:
+            - mysql
         environment:
             - PMA_ARBITRARY=1
             - PMA_HOST=mysql
