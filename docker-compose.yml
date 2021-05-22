@@ -9,7 +9,7 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASS:-secret}
             MYSQL_DATABASE: ${DB_NAME:-wordpress}
-            MYSQL_USER: wordpress
+            MYSQL_USER: ${DB_USER:-phper}
             MYSQL_PASSWORD: ${DB_PASS:-secret}
 
     wordpress:
@@ -23,7 +23,7 @@ services:
         restart: always
         environment:
             WORDPRESS_DB_HOST: mysql:3306
-            WORDPRESS_DB_USER: wordpress
+            WORDPRESS_DB_USER: ${DB_USER:-phper}
             WORDPRESS_DB_PASSWORD: ${DB_PASS:-secret}
 
     phpmyadmin:
@@ -33,11 +33,11 @@ services:
         environment:
             - PMA_ARBITRARY=1
             - PMA_HOST=mysql
-            - PMA_USER=wordpress
+            - PMA_USER=${DB_USER:-phper}
             - PMA_PASSWORD=${DB_PASS:-secret}
         links:
             - mysql
         ports:
-            - 4040:80
+            - ${PHPMYADMIN_PORT:-1080}:80
 volumes:
     db_data:
