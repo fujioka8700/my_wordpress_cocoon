@@ -1,2 +1,5 @@
-# public フォルダ内、全て無視
-public/*
+# public ディレクトリ中の全ての、ファイルやディレクトリを無視
+/public/*
+
+# 特定のファイル(.gitkeep)だけ除外
+!/public/.gitkeep
