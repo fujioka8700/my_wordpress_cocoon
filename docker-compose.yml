@@ -40,5 +40,6 @@ services:
             - mysql
         ports:
             - ${PHPMYADMIN_PORT:-1080}:80
+
 volumes:
     db_data:
