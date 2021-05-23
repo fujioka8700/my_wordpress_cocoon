@@ -21,6 +21,7 @@ services:
             - ${WEB_PORT:-80}:80
         volumes:
             - ./public:/var/www/html
+            - ./infra/docker/php/php.ini:/usr/local/etc/php/php.ini
         restart: always
         environment:
             WORDPRESS_DB_HOST: mysql:3306
