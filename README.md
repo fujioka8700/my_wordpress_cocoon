@@ -18,15 +18,12 @@ phpMyAdmin
 http://localhost:1080/
 <br>
 <br>
+
 ## コンテナの詳細
 * wordpressコンテナ
     * WordPress
     * php7.4
-<br>
-<br>
 * mysqlコンテナ
     * mysql5.6
-<br>
-<br>
 * phpMyAdminコンテナ
     * phpMyAdmin
