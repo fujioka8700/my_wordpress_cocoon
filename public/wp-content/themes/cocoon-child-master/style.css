@@ -32,3 +32,9 @@ Version:    1.1.2
 @media screen and (max-width: 480px){
   /*必要ならばここにコードを書く*/
 }
+
+/* 固定ページでシェア・フォローボタンをまとめて非表示 */
+.page .sns-share,
+.page .sns-follow {
+    display: none;
+}
