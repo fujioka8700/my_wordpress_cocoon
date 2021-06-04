@@ -9,3 +9,6 @@
 !/public/wp-content/themes
 /public/wp-content/themes/*
 !/public/wp-content/themes/cocoon-child-master
+
+# .envは、含めない
+.env
