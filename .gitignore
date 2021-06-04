@@ -8,5 +8,4 @@
 /public/wp-content/*
 !/public/wp-content/themes
 /public/wp-content/themes/*
-!/public/wp-content/themes/cocoon-child-master
-!/public/wp-content/themes/cocoon-master
+# !/public/wp-content/themes/管理するテーマ
